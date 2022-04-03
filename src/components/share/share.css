@@ -1,0 +1,97 @@
+.loadingIndicator {
+  color: #fff !important;
+}
+
+.share {
+  width: 50%;
+  min-width: 400px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.shareWrapper {
+  padding: 20px;
+}
+
+.shareTop {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shareNameInput {
+  outline: none;
+  border: 2px solid #333;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.shareTextArea {
+  outline: none;
+  resize: none;
+  border: 2px solid #333;
+  padding: 10px;
+  padding-left: 20px;
+  height: 150px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.shareNameInput:focus,
+.shareTextArea:focus {
+  border-color: #1775ee;
+}
+
+.shareHr {
+  margin-block: 20px;
+}
+
+.shareBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.shareOptions {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shareButton {
+  border: none;
+  outline: none;
+  background-color: #008000;
+  color: #fff;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel {
+  background-color: #1775ee;
+}
+
+@media only screen and (max-width: 600px) {
+  .share {
+    min-width: 320px;
+  }
+
+  .shareOptions {
+    width: 80%;
+  }
+
+  .shareBottom {
+    justify-content: space-evenly;
+  }
+}

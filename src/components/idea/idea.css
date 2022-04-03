@@ -1,0 +1,73 @@
+.idea {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ideaWrapper {
+  padding: 20px;
+}
+
+.ideaTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 100px;
+  cursor: pointer;
+}
+
+.ideaCount {
+  font-size: 28px;
+  font-weight: bold;
+  color: #8b5cf6;
+  margin-right: 10px;
+}
+.ideaName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #8b8b8b;
+}
+
+.ideaCenter {
+  padding-block: 20px;
+}
+
+.ideaDescription {
+  font-size: 18px;
+}
+
+.ideaBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tweet {
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+.date {
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
+@media only screen and (max-width: 600px) {
+  .idea {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .ideaTopRight span {
+    display: block;
+  }
+  .ideaTopRight {
+    text-align: center;
+  }
+}
