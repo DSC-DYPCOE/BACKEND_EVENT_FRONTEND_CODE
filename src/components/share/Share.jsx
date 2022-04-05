@@ -1,7 +1,7 @@
 import "./share.css";
 import autosize from "autosize";
 import { useState, useEffect, useRef } from "react";
-import axios from "axios";
+import { baseURL } from "../../api/baseURL";
 
 // mui imports
 import { CircularProgress } from "@mui/material";
@@ -23,7 +23,7 @@ export default function Share() {
     const description = shareTextArea.current.value;
 
     try {
-      await axios.post("/ideas", { name, description });
+      await baseURL.post("/ideas", { name, description });
       setLoading(false);
       handleCancel();
     } catch (err) {

@@ -1,6 +1,6 @@
 import "./feed.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { baseURL } from "../../api/baseURL";
 
 // mui imports
 import { CircularProgress } from "@mui/material";
@@ -8,7 +8,6 @@ import { CircularProgress } from "@mui/material";
 // components imports
 import Share from "../share/Share";
 import Idea from "../idea/Idea";
-
 export default function Feed() {
   const [ideas, setIdeas] = useState([]);
   const [nbHits, setNbHits] = useState(0);
@@ -17,10 +16,8 @@ export default function Feed() {
   const getIdeas = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/ideas");
-      const reviewedIdeas = response.data.ideas.filter(
-        (i) => i.isReviewed === true
-      );
+      const response = await baseURL.get("/ideas");
+      const reviewedIdeas = response.data.ideas;
       setIdeas(reviewedIdeas);
       setNbHits(reviewedIdeas.length);
       setLoading(false);
